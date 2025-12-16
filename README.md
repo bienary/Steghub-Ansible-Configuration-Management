@@ -81,3 +81,16 @@ Configure Jenkins build job to save repository content every time you change it 
 ### Set up a webhook in Github:
 Go to your ansible-config-mgt repository
 Navigate to Settings > Webhooks > Add webhook
+
+<img width="1320" height="650" alt="image" src="https://github.com/user-attachments/assets/66378e16-2760-44cf-aadf-0e31d5f14bf6" />
+
+## Create a new Freestyle project in Jenkins named ansible:
+
+<img width="1320" height="650" alt="image" src="https://github.com/user-attachments/assets/7ae609ae-bc83-4162-8dbc-d7c00ad024c2" />
+
+### Configure Source Code Management:
+
+- Choose Git
+- Provide the ansible-config-mgt repository URL
+- Add credentials for Jenkins to access the repository
+
