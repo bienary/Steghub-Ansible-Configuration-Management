@@ -190,4 +190,33 @@ ssh-add <path-to-private-key>
 ssh-add -l
 ```
 
+<img width="1118" height="213" alt="image" src="https://github.com/user-attachments/assets/6e2a10c7-cd6f-4936-b9a2-065c064b904c" />
+
+- Now, ssh into Jenkins-Ansible server using ssh-agent
+
+```
+ssh -A ubuntu@public-ip
+```
+
+<img width="1120" height="739" alt="image" src="https://github.com/user-attachments/assets/df3647d1-38f1-439d-b7d8-9b8a35660138" />
+
+## Update Inventory File
+
+```
+[nfs]
+<NFS-Server-Private-IP-Address> ansible_ssh_user=ec2-user
+
+[webservers]
+<Web-Server1-Private-IP-Address> ansible_ssh_user=ec2-user
+<Web-Server2-Private-IP-Address> ansible_ssh_user=ec2-user
+
+[db]
+<Database-Private-IP-Address> ansible_ssh_user=ec2-user
+
+[lb]
+<Load-Balancer-Private-IP-Address> ansible_ssh_user=ubuntu
+```
+
+
+
 
