@@ -138,3 +138,50 @@ ls /var/lib/jenkins/jobs/Ansible/builds/<build_number>/archive/
 - Configure VS Code for GitHub
 
 > Connect VS Code to your newly created GitHub repository:
+
+- Clone down your ansible-config-mgt repo to your Jenkins-Ansible instance.
+
+<img width="1319" height="217" alt="image" src="https://github.com/user-attachments/assets/a8a28c7c-02bb-4772-8aab-c945df6a17bf" />
+
+## Ansible Development:
+
+- Create Feature Branch
+
+- Create a new branch for Development
+
+```
+git checkout -b feature/project-11-ansible-config
+```
+
+<img width="1313" height="469" alt="image" src="https://github.com/user-attachments/assets/6a2a2ee2-59a4-4f3e-9057-66d871120d44" />
+
+- Create a directory and name it playbooks.
+
+```
+mkdir playbooks
+```
+
+- Create a directory and name it inventory.
+
+```
+mkdir inventory
+```
+
+<img width="1012" height="197" alt="image" src="https://github.com/user-attachments/assets/2c3bff35-0d9c-4c7c-83b4-ed8cd13f98f5" />
+
+- Within the playbooks folder, create first playbook, and name it common.yml
+
+<img width="945" height="100" alt="image" src="https://github.com/user-attachments/assets/000b1538-090e-42bd-96ee-cd043e9c70b0" />
+
+- Create the initial inventory files (Development, Staging Testing and Production) dev, staging, uat, and prod respectively.
+
+<img width="1072" height="264" alt="image" src="https://github.com/user-attachments/assets/adcc199c-0e3b-4355-8a90-550bb73eb780" />
+
+
+## Ansible Inventory Setup
+
+Within this project, the Ansible inventory file specifies the hosts and host groups targeted by playbooks, roles, and tasks. The inventory is organized by environment to ensure clear infrastructure separation, improve maintainability, and enable environment-specific automation workflows.
+
+> Ansible uses SSH to connect to target servers. Set up SSH agent to manage your SSH keys:
+
+
