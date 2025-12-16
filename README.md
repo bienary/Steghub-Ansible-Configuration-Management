@@ -34,9 +34,50 @@ The architecture consists of a centralized Ansible control node and multiple tar
   - Stores Ansible configurations
   - Triggers Jenkins builds via webhooks
 
-📸 **Architecture Diagram**
-```md
-![Architecture Diagram](screenshots/architecture.png)
+## Technologies Used
+
+- Configuration Management: Ansible
+
+- CI/CD: Jenkins
+
+- Cloud Platform: AWS (EC2, Elastic IP)
+
+- Version Control: Git & GitHub
+
+- OS: Ubuntu Linux
+
+- IDE: Visual Studio Code
+
+## Step 1 - Install and Configure Ansible on EC2 Instance.
+
+Update the Name tag on your Jenkins EC2 Instance to Jenkins-Ansible. We will use this server to run playbooks.
+
+<img width="1138" height="97" alt="image" src="https://github.com/user-attachments/assets/33daa769-a999-499a-b587-8471a9febb66" />
 
 
+### Github Repository Creation
+- Create a new repository named ansible-config-mgt in your GitHub account.
 
+### Ansible Installation
+- Install Ansible on the jenkins-ansible server:
+
+```
+sudo apt update
+sudo apt install ansible -y
+```
+
+<img width="1321" height="539" alt="image" src="https://github.com/user-attachments/assets/8fa52da0-e4ef-41ad-a08d-1986c15d753d" />
+
+- Check your Ansible version by running
+```
+ansible --version
+```
+
+<img width="1322" height="267" alt="image" src="https://github.com/user-attachments/assets/46844fb5-aeb8-45d4-910e-20d4f0c200a1" />
+
+### Jenkins Job Configuration
+Configure Jenkins build job to save repository content every time you change it automatically: 
+
+### Set up a webhook in Github:
+Go to your ansible-config-mgt repository
+Navigate to Settings > Webhooks > Add webhook
