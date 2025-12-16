@@ -124,3 +124,17 @@ ls /var/lib/jenkins/jobs/Ansible/builds/<build_number>/archive/
 ### Note: The Ansible name configuration on Jenkins is case sensitive.
 
 <img width="1325" height="152" alt="image" src="https://github.com/user-attachments/assets/6627f803-2097-4eb0-8fde-5a6586a07370" />
+
+### Allocate an Elastic IP to your Jenkins-Ansible server to maintain a consistent IP address for your GitHub webhook configuration.
+
+<img width="1165" height="483" alt="image" src="https://github.com/user-attachments/assets/f794830b-03d6-4211-904c-366e73d2ed7f" />
+
+## Prepare your development environment using Visual Studio Code.
+
+- Install Visual Studio Code
+
+> Download and install Visual Studio Code as your integrated Development Environment(IDE)
+
+- Configure VS Code for GitHub
+
+> Connect VS Code to your newly created GitHub repository:
