@@ -94,3 +94,17 @@ Navigate to Settings > Webhooks > Add webhook
 - Provide the ansible-config-mgt repository URL
 - Add credentials for Jenkins to access the repository
 
+<img width="1320" height="650" alt="image" src="https://github.com/user-attachments/assets/a17d022e-5c67-46c4-9543-2d095086726a" />
+
+### Configure Build Triggers:
+
+- Select "GitHub hook trigger for GITScm polling"
+
+<img width="1320" height="650" alt="image" src="https://github.com/user-attachments/assets/e2287839-59a4-4eb7-86fb-80d297ec5a1b" />
+
+### Configure Post-build Actions:
+- Click `Add post-build action`
+- Click `Archive the artifacts`
+- Files to archive: **
+
+<img width="1320" height="650" alt="image" src="https://github.com/user-attachments/assets/2d582bba-5c68-46c2-a339-780bccf54b32" />
