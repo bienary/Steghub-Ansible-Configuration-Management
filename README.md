@@ -111,8 +111,16 @@ Navigate to Settings > Webhooks > Add webhook
 
 > Test setup by making some change in README.md file in master branch and make sure that builds starts automatically.
 
+<img width="1320" height="650" alt="image" src="https://github.com/user-attachments/assets/29c8cf0a-1b6d-493c-beb6-1e6d39e0f9d2" />
+
+<img width="1320" height="650" alt="image" src="https://github.com/user-attachments/assets/b076b76f-b21d-4c32-9845-6f2a7d5cd104" />
+
+
 > Jenkins saves the files (build artifacts) in following folder.
 
 ```
-ls /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/
+ls /var/lib/jenkins/jobs/Ansible/builds/<build_number>/archive/
 ```
+### Note: The Ansible name configuration on Jenkins is case sensitive.
+
+<img width="1325" height="152" alt="image" src="https://github.com/user-attachments/assets/6627f803-2097-4eb0-8fde-5a6586a07370" />
