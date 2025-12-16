@@ -182,6 +182,12 @@ mkdir inventory
 
 Within this project, the Ansible inventory file specifies the hosts and host groups targeted by playbooks, roles, and tasks. The inventory is organized by environment to ensure clear infrastructure separation, improve maintainability, and enable environment-specific automation workflows.
 
-> Ansible uses SSH to connect to target servers. Set up SSH agent to manage your SSH keys:
+> Ansible uses SSH to connect to target servers. Set up SSH agent to manage your SSH keys & Confirm the key has been added with the command below:
+
+```
+eval `ssh-agent -s`
+ssh-add <path-to-private-key>
+ssh-add -l
+```
 
 
