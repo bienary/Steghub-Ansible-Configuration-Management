@@ -108,3 +108,5 @@ Navigate to Settings > Webhooks > Add webhook
 - Files to archive: **
 
 <img width="1320" height="650" alt="image" src="https://github.com/user-attachments/assets/2d582bba-5c68-46c2-a339-780bccf54b32" />
+
+> Test setup by making some change in README.md file in master branch and make sure that builds starts automatically.
