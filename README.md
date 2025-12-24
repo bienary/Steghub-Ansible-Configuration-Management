@@ -217,6 +217,42 @@ ssh -A ubuntu@public-ip
 <Load-Balancer-Private-IP-Address> ansible_ssh_user=ubuntu
 ```
 
+<img width="1024" height="448" alt="Screenshot From 2025-12-24 21-59-25" src="https://github.com/user-attachments/assets/629a0e3a-1fc6-454b-8bf7-aa1e14302295" />
+
+# Creating a Common Playbook
+
+- Create a common playbook to perform tasks on all servers listed in the inventory.
+
+- Update your playbooks/common.yml file:
+
+```
+---
+- name: Update web and NFS servers
+  hosts: webservers, nfs
+  remote_user: ubuntu
+  become: true
+  become_user: root
+  tasks:
+    - name: Ensure wireshark is at the latest version
+      yum:
+        name: wireshark
+        state: latest
+
+- name: Update LB and DB servers
+  hosts: lb, db
+  remote_user: ubuntu
+  become: true
+  become_user: root
+  tasks:
+    - name: Update apt repo
+      apt:
+        update_cache: yes
+
+    - name: Ensure wireshark is at the latest version
+      apt:
+        name: wireshark
+        state: latest
+```
 
 
 
